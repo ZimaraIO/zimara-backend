@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🪅 Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
       - name: 🗄️ Checkout Source Code
         uses: actions/checkout@v4
         with:
@@ -127,7 +127,7 @@ jobs:
       - name: 🦤 Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: 🪅 Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
       - name: 🗄️ Checkout Source Code
         uses: actions/checkout@v4
         with:
