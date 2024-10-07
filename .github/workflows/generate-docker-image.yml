@@ -59,7 +59,7 @@ jobs:
             type=semver,pattern={{major}}
             type=sha
       - name: 🗃️ Build to test
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         if: ${{ github.event_name == 'pull_request' }}
         with:
           context: "api"
@@ -81,7 +81,7 @@ jobs:
           max-attempts: 5
           retry-delay: 1s
       - name: 🍱 Build and push
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         if: ${{ github.event_name != 'pull_request' }}
         with:
           context: "api"
@@ -163,7 +163,7 @@ jobs:
             type=semver,pattern={{major}}
             type=sha
       - name: 🍱 Build and push
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         if: ${{ github.event_name != 'pull_request' }}
         with:
           context: "api"
